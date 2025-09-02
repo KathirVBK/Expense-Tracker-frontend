@@ -1,5 +1,5 @@
 import React from 'react'
-import Expenseitem from './Expenseitem'
+import Expenseitem from './ExpenseItem'
 
 function History(props) {
   return (
