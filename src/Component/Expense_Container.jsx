@@ -10,7 +10,7 @@ function Expense_Container() {
    const [expense,setExpense]=useState(EXPENSE)
    async  function addExpense(title,amount)
    {try{
-    const newExpense = await fetch("http://localhost:5555/",
+    const newExpense = await fetch("https://expense-tracker-678l.onrender.com/post",
       {
       method:"POST",
       headers:{"Content-Type":"application/json"},
@@ -23,7 +23,7 @@ function Expense_Container() {
    }
 
    async function getExpenses(){
-    const response=await fetch("http://localhost:5555/get")
+    const response=await fetch("https://expense-tracker-678l.onrender.com/get")
     const data= await response.json();
     setExpense(data.expenses)
    }
@@ -32,7 +32,7 @@ function Expense_Container() {
    },[])
 
    async function deleteExpense(id){
-   await fetch(`http://localhost:5555/delete/${id}`,
+   await fetch(`https://expense-tracker-678l.onrender.com/delete/${id}`,
   {
    method:"DELETE"
    });
