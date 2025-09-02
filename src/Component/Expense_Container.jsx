@@ -10,7 +10,7 @@ function Expense_Container() {
    const [expense,setExpense]=useState(EXPENSE)
    async  function addExpense(title,amount)
    {try{
-    const newExpense = await fetch("https://expense-tracker-6781.onrender.com/post",
+    const newExpense = await fetch("https://expense-tracker-678l.onrender.com/post",
       {
       method:"POST",
       headers:{"Content-Type":"application/json"},
